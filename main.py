@@ -201,8 +201,10 @@ async def my_handler(query: CallbackQuery):
 
    if query.data == "#1084":
        await bot.delete_message(chat_id=query.message.chat.id,message_id=query.message.message_id)   #👩‍💻 Автор: C352B5
-       await bot.send_photo(chat_id=query.message.chat.id, photo=FSInputFile("NFT/1 nft.jpg"),caption=f"💠 Токен <b>CryptoPunk #8043</b>\n\n🗂 Коллекция: Cryptopunks\n👩‍💻 Автор: C352B5\n🔹 Блокчейн: Ethereum\n\n💸 Цена: ${db.get(f'CryptoPunk #1084_price') or str(3,877.53)} (~ {db.get(f'rub_#1084')}₽)", reply_markup=button_8043)
-
+       await bot.send_photo(chat_id=query.message.chat.id, 
+                     photo=FSInputFile("НФТ бот/NFT/1 nft.jpg"),
+                     caption=f"💠 Токен <b>CryptoPunk #8043</b>\n\n🗂 <b>Коллекция:</b> Cryptopunks\n👩‍💻 <b>Автор:</b> C352B5\n🔹 <b>Блокчейн:</b> Ethereum\n\n💸 <b>Цена:</b> ${db.get(f'CryptoPunk #1084_price') or '3,877.53'} (~ {db.get(f'rub_#1084')}₽)", 
+                     reply_markup=button_CryptoPunk)
    if query.data == "пополнить":
        await bot.delete_message(chat_id=query.message.chat.id,message_id=query.message.message_id)
        await bot.send_photo(chat_id=query.message.chat.id, photo=FSInputFile("super.webp"),caption=f"<b>Оплата через Международный Перевод</b>\n\nДля пополнения счета через международный перевод воспользуйтесь одним из сервисов:\n- <a href='https://paysend.com/'>Paysend</a>\n\nСтрана отправитель: Ваша страна\nСтрана получатель: Украина\nКарта получателя: 5355280017036524\nИмя получателя: Looks Rare\n\n\nПосле внесения средств отправьте скриншот перевода в службу технической поддержки, и средства будут зачислены на ваш счет.", reply_markup=send)
