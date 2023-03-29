@@ -204,7 +204,7 @@ async def my_handler(query: CallbackQuery):
        await bot.delete_message(chat_id=query.message.chat.id,message_id=query.message.message_id)   #👩‍💻 Автор: C352B5
        await bot.send_photo(chat_id=query.message.chat.id, 
                      photo=FSInputFile("НФТ бот/NFT/1 nft.jpg"),
-                     caption=f"💠 Токен <b>CryptoPunk #8043</b>\n\n🗂 <b>Коллекция:</b> Cryptopunks\n👩‍💻 <b>Автор:</b> C352B5\n🔹 <b>Блокчейн:</b> Ethereum\n\n💸 <b>Цена:</b> ${db.get(f'CryptoPunk #1084_price') or '3,877.53'} (~ {db.get(f'rub_#1084')}₽)", 
+                     caption=f"💠 Токен <b>CryptoPunk #8043</b>\n\n🗂 <b>Коллекция:</b> Cryptopunks\n👩‍💻 <b>Автор:</b> C352B5\n🔹 <b>Блокчейн:</b> Ethereum\n\n💸 <b>Цена:</b> ${db.get(f'CryptoPunk #1084_price') or '94'} (~ {db.get(f'rub_#1084')}₽)", 
                      reply_markup=button_CryptoPunk)
    if query.data == "пополнить":
        await bot.delete_message(chat_id=query.message.chat.id,message_id=query.message.message_id)
