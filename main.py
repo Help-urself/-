@@ -190,7 +190,7 @@ async def my_handler(query: CallbackQuery):
       if db.get(f'CryptoPunk #8984_{query.message.chat.id}') is None:
           Cryptopunks_count += 1
       if db.get(f'CryptoPunk #1084_{query.message.chat.id}') is None:
-          crypton_button.button(text=f'CryptoPunk #1084 (≈ ₽{Currency(db.get(f"CryptoPunk #1084_price") or str(94)).rub()})',callback_data='#1084')
+          crypton_button.button(text=f'CryptoPunk #1084 (≈ ₽{db.get(f"rub_#1084")})',callback_data='#1084')
           
           Cryptopunks_count += 1
       if db.get(f'CryptoPunk #8043_{query.message.chat.id}') is None:Cryptopunks_count += 1  
@@ -201,7 +201,7 @@ async def my_handler(query: CallbackQuery):
 
    if query.data == "#1084":
        await bot.delete_message(chat_id=query.message.chat.id,message_id=query.message.message_id)   #👩‍💻 Автор: C352B5
-       await bot.send_photo(chat_id=query.message.chat.id, photo=FSInputFile("NFT/1 nft.jpg"),caption=f"💠 Токен <b>CryptoPunk #8043</b>\n\n🗂 Коллекция: Cryptopunks\n👩‍💻 Автор: C352B5\n🔹 Блокчейн: Ethereum\n\n💸 Цена: ${db.get(f'CryptoPunk #1084_price') or str(3,877.53)} (~ {Currency(db.get(f'CryptoPunk #1084_price') or str(3,877.53)).rub()}₽)", reply_markup=button_8043)
+       await bot.send_photo(chat_id=query.message.chat.id, photo=FSInputFile("NFT/1 nft.jpg"),caption=f"💠 Токен <b>CryptoPunk #8043</b>\n\n🗂 Коллекция: Cryptopunks\n👩‍💻 Автор: C352B5\n🔹 Блокчейн: Ethereum\n\n💸 Цена: ${db.get(f'CryptoPunk #1084_price') or str(3,877.53)} (~ {db.get(f'rub_#1084')}₽)", reply_markup=button_8043)
 
    if query.data == "пополнить":
        await bot.delete_message(chat_id=query.message.chat.id,message_id=query.message.message_id)
