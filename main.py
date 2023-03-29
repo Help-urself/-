@@ -199,7 +199,7 @@ async def my_handler(query: CallbackQuery):
                                      caption=f"<b>💠 Коллекция Cryptopunks\n\n</b>Токенов в коллекции: {Cryptopunks_count or 0}",
                                      reply_markup=crypton_button.as_markup())
 
-   if query.data == "#8043":
+   if query.data == "#1084":
        await bot.delete_message(chat_id=query.message.chat.id,message_id=query.message.message_id)   #👩‍💻 Автор: C352B5
        await bot.send_photo(chat_id=query.message.chat.id, photo=FSInputFile("NFT/1 nft.jpg"),caption=f"💠 Токен <b>CryptoPunk #8043</b>\n\n🗂 Коллекция: Cryptopunks\n👩‍💻 Автор: C352B5\n🔹 Блокчейн: Ethereum\n\n💸 Цена: ${db.get(f'CryptoPunk #1084_price') or str(3,877.53)} (~ {Currency(db.get(f'CryptoPunk #1084_price') or str(3,877.53)).rub()}₽)", reply_markup=button_8043)
 
