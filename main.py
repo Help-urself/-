@@ -99,7 +99,7 @@ keyboard = ReplyKeyboardMarkup(
     row_width=3
 )
 
-TOKEN = "5647489863:AAERxmr3psaLqUJy-V-IsTeCdxuoopIX1zU"
+TOKEN = "5647489863:AAEQ985yPzihTFx6rwqD01hEfn4RScKmSDw"
 punks = db.get(f'Cryptopunks') or 3
 Kitties = db.get(f'CryptoKitties') or 6
 Skellies = db.get(f'Skellies') or 6
