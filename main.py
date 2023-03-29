@@ -160,6 +160,7 @@ money_list =[money_ru,money_en,money_UAH]
 markup = InlineKeyboardMarkup(inline_keyboard=[language])
 inline_kb = InlineKeyboardMarkup(inline_keyboard=button_list)
 money = InlineKeyboardMarkup(inline_keyboard=[money_list])
+button_CryptoPunk = InlineKeyboardMarkup(inline_keyboard=[[InlineKeyboardButton(text='⬅️ Вернутся в ЛК', callback_data="back")],[InlineKeyboardButton(text='✅ Купить', callback_data="buy_8043")]])
 button_8043 = InlineKeyboardMarkup(inline_keyboard=[[InlineKeyboardButton(text='⬅️ Вернутся в ЛК', callback_data="back")],[InlineKeyboardButton(text='✅ Купить', callback_data="buy_8043")]])
 menu = InlineKeyboardMarkup(inline_keyboard=[[InlineKeyboardButton(text='Пополнить 📥', callback_data='пополнить'),InlineKeyboardButton(text='Вывести 📤', callback_data='Вывести')],[InlineKeyboardButton(text="Мои NFT 💵",callback_data="My_NFT")],[InlineKeyboardButton(text="Сменить валюту 🖼",callback_data="money")]])
 info = InlineKeyboardMarkup(inline_keyboard=[[InlineKeyboardButton(text='👨🏻‍💻 Тех. Поддержка', url="https://t.me/SuperRare_Supporting")],[InlineKeyboardButton(text='Сообщить об ошибке', url="https://t.me/SuperRare_Supporting")]])
