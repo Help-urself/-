@@ -1,1 +1,1 @@
-web: python main.py
+web: python НФТ бот/main.py
